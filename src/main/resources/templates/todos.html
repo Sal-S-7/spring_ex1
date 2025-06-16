@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Todos</title>
+</head>
+<body>
+<h1>Liste des Todos</h1>
+<ul>
+    <li th:each="todo : ${todos}">
+        <a th:href="@{'/todos/' + ${todo.id}}" th:text="${todo.name}">Todo name</a>
+        <span th:text="${todo.isDone} ? '✓' : '✗'"></span>
+    </li>
+</ul>
+</body>
+</html>

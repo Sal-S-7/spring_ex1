@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Détails Todo</title>
+</head>
+<body>
+<h1 th:text="${todo.name}">Nom Todo</h1>
+<p th:text="${todo.description}">Description</p>
+<p>Etat : <span th:text="${todo.isDone} ? 'Terminée' : 'En cours'"></span></p>
+
+<a href="/todos">Retour à la liste</a>
+</body>
+</html>
